@@ -1,28 +1,42 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { createSwitchNavigator, createBrowserApp } from "react-navigation"
+import HomeScreen from "./views/HomeScreen/HomeScreen";
+import SecondScreen from "./views/SecondScreen/SecondScreen";
+import UserScreen from "./views/UserScreen/UserScreen";
 
-class App extends Component {
+export default class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      const switchNavigator = createSwitchNavigator(
+          {
+            HomeScreen: {
+                  screen: HomeScreen,
+                  navigationOptions: {
+                      header: null,
+                      headerMode: "none",
+                      gesturesEnabled: false
+                  }
+              },
+              SecondScreen: {
+                screen: SecondScreen,
+                navigationOptions: {
+                    header: null,
+                    headerMode: "none",
+                    gesturesEnabled: false
+                }
+            },
+            UserScreen: {
+              screen: UserScreen,
+              navigationOptions: {
+                  header: null,
+                  headerMode: "none",
+                  gesturesEnabled: false
+              }
+          }
+        }
+      );
+      const AppContainer = createBrowserApp(switchNavigator);
+      return (
+          <AppContainer/>
+      );
   }
 }
-
-export default App;
