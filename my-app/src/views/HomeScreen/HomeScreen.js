@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
+import { Link } from "@react-navigation/web";
 import logo from '../../logo.svg';
+import { strings } from "../../i18n/i18n";
 import './HomeScreen-style.css';
+window.__DEV__ = true;
 
 class HomeScreen extends Component {
   render() {
@@ -9,12 +11,18 @@ class HomeScreen extends Component {
       <div className="HomeScreen">
         <header className="HomeScreen-header">
           <img src={logo} className="HomeScreen-logo" alt="logo" />
-          <p>Home Screen</p>
-          <Button onPress={() => this.props.navigation.navigate('SecondScreen')} title="Second"/>
+          <p>{strings("home_screen")}</p>
+          <Link routeName="SecondScreen" params={{ title: "SecondScreen" }}>SecondScreen</Link>
         </header>
       </div>
     );
   }
 }
+
+HomeScreen.path = "HomeScreen";
+HomeScreen.navigationOptions = {
+  title: strings("home_screen"),
+  linkName: "HomeScreen"
+};
 
 export default HomeScreen;
