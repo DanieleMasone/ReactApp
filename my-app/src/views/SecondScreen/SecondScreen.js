@@ -19,10 +19,4 @@ class SecondScreen extends Component {
   }
 }
 
-SecondScreen.path = "SecondScreen";
-SecondScreen.navigationOptions = {
-  title: "SecondScreen",
-  linkName: "SecondScreen"
-};
-
 export default SecondScreen;

@@ -19,10 +19,4 @@ class HomeScreen extends Component {
   }
 }
 
-HomeScreen.path = "HomeScreen";
-HomeScreen.navigationOptions = {
-  title: strings("home_screen"),
-  linkName: "HomeScreen"
-};
-
 export default HomeScreen;
