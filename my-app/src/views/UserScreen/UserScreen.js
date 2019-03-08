@@ -24,4 +24,10 @@ class UserScreen extends Component {
   }
 }
 
+UserScreen.path = "UserScreen/:name";
+UserScreen.navigationOptions = ({ navigation }) => ({
+  title: navigation.getParam("name"),
+  linkName: "UserScreen"
+});
+
 export default UserScreen;
