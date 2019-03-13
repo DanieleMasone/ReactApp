@@ -1,4 +1,9 @@
 {
     "loading": "Caricamento...",
-    "hello_navigation": "Ciao, navigazione"
+    "hello_navigation": "Ciao, navigazione",
+    "home_screen": "Schermata Home",
+    "user_screen": "Schermata Utente",
+    "second_screen": "Schermata Seconda",
+    "about_jamie": "Dettagli Jamie",
+    "about_brent": "Dettagli Brent"
 }

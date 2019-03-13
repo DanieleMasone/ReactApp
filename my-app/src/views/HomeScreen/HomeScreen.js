@@ -12,7 +12,7 @@ class HomeScreen extends Component {
         <header className="HomeScreen-header">
           <img src={logo} className="HomeScreen-logo" alt="logo" />
           <p>{strings("home_screen")}</p>
-          <Link routeName="SecondScreen" params={{ title: "SecondScreen" }}>SecondScreen</Link>
+          <Link routeName="SecondScreen" params={{ title: "SecondScreen" }}>{strings("second_screen")}</Link>
         </header>
       </div>
     );
@@ -22,7 +22,7 @@ class HomeScreen extends Component {
 HomeScreen.path = "HomeScreen";
 HomeScreen.navigationOptions = {
   title: strings("home_screen"),
-  linkName: "Home Screen"
+  linkName: strings("home_screen")
 };
 
 export default HomeScreen;

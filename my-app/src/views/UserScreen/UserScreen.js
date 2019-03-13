@@ -12,12 +12,12 @@ class UserScreen extends Component {
       <div className="UserScreen">
         <header className="UserScreen-header">
           <img src={logo} className="UserScreen-logo" alt="logo" />
-          <p>User Screen</p>
+          <p>{strings("user_screen")}</p>
           <h2>
             {navigation.getParam("name")}
             's Profile
           </h2>
-          <Link routeName="HomeScreen" params={{ title: "Home" }}>Home</Link>
+          <Link routeName="HomeScreen" params={{ title: "Home" }}>{strings("home_screen")}</Link>
         </header>
       </div>
     );
@@ -27,7 +27,7 @@ class UserScreen extends Component {
 UserScreen.path = "UserScreen/:name";
 UserScreen.navigationOptions = ({ navigation }) => ({
   title: navigation.getParam("name"),
-  linkName: "UserScreen"
+  linkName: strings("user_screen")
 });
 
 export default UserScreen;

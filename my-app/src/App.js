@@ -21,11 +21,11 @@ class SidebarView extends Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="mr-auto">
-                      <div className="nav-link"><Link routeName="HomeScreen">Home Screen</Link></div>
-                      <div className="nav-link"><Link className="nav-link" routeName="SecondScreen">Second Screen</Link></div>
+                      <div className="nav-link"><Link routeName="HomeScreen">{strings("home_screen")}</Link></div>
+                      <div className="nav-link"><Link className="nav-link" routeName="SecondScreen">{strings("second_screen")}</Link></div>
                     <NavDropdown title="UserScreen" id="basic-nav-dropdown">
-                      <div className="dropdown-item"><Link routeName="UserScreen" params={{ name: "jamie" }}>About Jamie</Link></div>
-                      <div className="dropdown-item"><Link routeName="UserScreen" params={{ name: "brent" }}>About Brent</Link></div>
+                      <div className="dropdown-item"><Link routeName="UserScreen" params={{ name: "jamie" }}>{strings("about_jamie")}</Link></div>
+                      <div className="dropdown-item"><Link routeName="UserScreen" params={{ name: "brent" }}>{strings("about_brent")}</Link></div>
                       <NavDropdown.Divider />
                     </NavDropdown>
                   </Nav>

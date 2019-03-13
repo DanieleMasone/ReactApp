@@ -1,4 +1,9 @@
 {
-    "loading": "Caricamento...",
-    "hello_navigation": "Hello, navigation"
+    "loading": "Loading...",
+    "hello_navigation": "Hello, navigation",
+    "home_screen": "Home Screen",
+    "user_screen": "User Screen",
+    "second_screen": "Second Screen",
+    "about_jamie": "About Jamie",
+    "about_brent": "About Brent"
 }
